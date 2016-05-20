@@ -15,7 +15,9 @@ class RecetteController extends Controller
      */
     public function index()
     {
-        //
+        $list = Recette::paginate(5);
+
+        return view('recette.index', compact('list'));
     }
 
     /**
@@ -25,7 +27,7 @@ class RecetteController extends Controller
      */
     public function create()
     {
-        //
+        return view('recette.create');
     }
 
     /**
@@ -36,7 +38,14 @@ class RecetteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, ['title' => 'required', 'description' => 'required', 'category' => 'required', 'recette' => 'required']);
+
+        $recettes = new Recette;
+        $input =  $request->input();
+        $input['user_id'] = Auth::user()->id;
+        $recettes->fill($input)->save();
+
+        return redirect()->route('recette.index');
     }
 
     /**
@@ -47,7 +56,9 @@ class RecetteController extends Controller
      */
     public function show($id)
     {
-        //
+        $recettes = Recette::findOrFail($id);
+
+        return view('recette.show', compact('recette'));
     }
 
     /**
