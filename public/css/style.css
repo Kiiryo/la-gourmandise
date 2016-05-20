@@ -25,3 +25,11 @@
 .dropdown-menu > li > a{
     color: #333333;
 }
+
+.auteur{
+    font-style: italic;
+}
+
+.img_recette{
+    width: 100%;
+}

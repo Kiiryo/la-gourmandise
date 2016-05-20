@@ -5,18 +5,19 @@
         <div class="row">
             @include('errors.message')
             @foreach($list as $recette)
-                <div class="thumbnail col-md-6" style="min-height:100px">
-
-                    <a href="{{route('recette.show', $recette->id)}}">
-                        <div class="description" style="font-size:1.4em;">
-                            {{$recette->id}}. {{$recette->title}}
-                        </div>
-                    </a>
-                    <p>{{$recette->username}}</p>
-                    <p>{{$recette->description}}</p>
-                    <p>Type de recette : {{$recette->category}}</p>
-
-                    <br/>
+                <div class=" col-md-6">
+                    <div class="col-md-4">
+                        <img src="{{asset('img/crepe.JPG')}}" alt="" class="img_recette">
+                    </div>
+                    <div class="col-md-8">
+                        <a href="{{route('recette.show', $recette->id)}}">
+                            <h2>{{$recette->id}}. {{$recette->title}}</h2>
+                        </a>
+                        <p class="auteur">Par :{{$recette->username}}</p>
+                        <h4>{{$recette->description}}</h4>
+                        <p>Type de recette : {{$recette->category}}</p>
+                    </div>
+                    
                 </div>
             @endforeach
         </div>
