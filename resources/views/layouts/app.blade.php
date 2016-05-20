@@ -55,7 +55,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}"><i class="fa fa-home fa-5" aria-hidden="true"></i><br> Accueil</a></li>
+                    <li><a href="{{ url('/') }}"><i class="fa fa-home fa-5" aria-hidden="true"></i><br> Accueil</a></li>
                     <li><a href="{{ route('recette.index') }}"><i class="fa fa-list" aria-hidden="true"></i><br> Liste des recettes</a></li>
                     @if(Auth::check())
                         <li><a href="{{ route('recette.create') }}"><i class="fa fa-plus" aria-hidden="true"></i><br> Creer une recette</a></li>
