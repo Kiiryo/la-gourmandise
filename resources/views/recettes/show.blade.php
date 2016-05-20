@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container margin">
         <div class="row">
             @include('errors.message')
             <div class="col-md-10 col-md-offset-1">

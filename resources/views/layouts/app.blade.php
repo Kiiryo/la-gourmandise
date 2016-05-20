@@ -27,7 +27,19 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-static-top">
+    <nav class="navbar navbar-static-top partie-top">
+        <div class="container">
+            <div class="navbar-header titre-appli">
+
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    La Gourmandise
+                </a>
+            </div>
+    </nav>
+
+    <!-- Menu en bas -->
+    <nav class="navbar navbar-static-top partie-bottom">
         <div class="container">
             <div class="navbar-header">
 
@@ -38,20 +50,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    La Gourmandise
-                </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Accueil</a></li>
-                    <li><a href="{{ route('recette.index') }}">Liste des recettes</a></li>
+                    <li><a href="{{ url('/home') }}"><i class="fa fa-home fa-5" aria-hidden="true"></i><br> Accueil</a></li>
+                    <li><a href="{{ route('recette.index') }}"><i class="fa fa-list" aria-hidden="true"></i><br> Liste des recettes</a></li>
                     @if(Auth::check())
-                        <li><a href="{{ route('recette.create') }}">Creer une recette</a></li>
+                        <li><a href="{{ route('recette.create') }}"><i class="fa fa-plus" aria-hidden="true"></i><br> Creer une recette</a></li>
                     @endif
                 </ul>
 

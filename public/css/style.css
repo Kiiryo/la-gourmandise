@@ -6,12 +6,46 @@
     background-color: #cc4732;
 }
 
+.partie-bottom{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0 !important;
+    width: 100%;
+}
+
+.partie-top{
+    position: fixed;
+    width: 100%;
+}
+
+.margin{
+    padding-bottom: 4em;
+    padding-top: 5em;
+}
+
+.titre-appli{
+    text-align: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.titre-appli .navbar-brand{
+    float: none !important;
+    margin-top: 1em;
+}
+
 .navbar-header a{
     color: #ffffff;
+
 }
 
 .navbar-collapse ul a{
     color: #ffffff;
+    text-align: center;
+}
+
+.navbar-collapse ul a .fa{
+    font-size: 1.5em;
 }
 
 .navbar-collapse ul a:hover{
