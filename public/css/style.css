@@ -1,0 +1,27 @@
+.navbar-toggle{
+    color: white;
+}
+
+.navbar{
+    background-color: #cc4732;
+}
+
+.navbar-header a{
+    color: #ffffff;
+}
+
+.navbar-collapse ul a{
+    color: #ffffff;
+}
+
+.navbar-collapse ul a:hover{
+    background-color: transparent;
+}
+
+.nav .open > a {
+    background-color: transparent !important;
+}
+
+.dropdown-menu > li > a{
+    color: #333333;
+}
