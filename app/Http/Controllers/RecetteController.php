@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Recette;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class RecetteController extends Controller
 {
@@ -17,7 +19,7 @@ class RecetteController extends Controller
     {
         $list = Recette::paginate(5);
 
-        return view('recette.index', compact('list'));
+        return view('recettes.index', compact('list'));
     }
 
     /**
@@ -27,7 +29,7 @@ class RecetteController extends Controller
      */
     public function create()
     {
-        return view('recette.create');
+        return view('recettes.create');
     }
 
     /**
@@ -38,14 +40,20 @@ class RecetteController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['title' => 'required', 'description' => 'required', 'category' => 'required', 'recette' => 'required']);
+        $this->validate($request, ['title' => 'required', 'description' => 'required', 'category' => 'required', 'recette' => 'required', 'difficulte' => 'required']);
 
-        $recettes = new Recette;
-        $input =  $request->input();
-        $input['user_id'] = Auth::user()->id;
-        $recettes->fill($input)->save();
+        $recet = new Recette;
+        $recet->user_id       = Auth::user()->id;
+        $recet->username      = Auth::user()->name;
+        $recet->id            = $request->id;
+        $recet->title         = $request->title;
+        $recet->category      = $request->category;
+        $recet->difficulte    = $request->difficulte;
+        $recet->description   = $request->description;
+        $recet->recette      = $request->recette;
+        $recet->save();
+        return redirect()->route('recette.index')->with('success', 'Votre Bap a bien été soumis.');
 
-        return redirect()->route('recette.index');
     }
 
     /**
@@ -56,9 +64,9 @@ class RecetteController extends Controller
      */
     public function show($id)
     {
-        $recettes = Recette::findOrFail($id);
+        $recette = Recette::findOrFail($id);
 
-        return view('recette.show', compact('recette'));
+        return view('recettes.show', compact('recette'));
     }
 
     /**

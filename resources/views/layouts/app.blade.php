@@ -49,7 +49,10 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Accueil</a></li>
-
+                    <li><a href="{{ route('recette.index') }}">Liste des recettes</a></li>
+                    @if(Auth::check())
+                        <li><a href="{{ route('recette.create') }}">Creer une recette</a></li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
