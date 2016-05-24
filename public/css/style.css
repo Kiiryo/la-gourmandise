@@ -7,6 +7,11 @@
     background-color: #cc4732;
 }
 
+.navbar-form{
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+
 .partie-bottom{
     position: fixed;
     bottom: 0;
@@ -19,9 +24,38 @@
     width: 100%;
 }
 
+.partie-top a{
+    color: #ffffff;
+}
+
+.recherche{
+    background-color: #eb6b56;
+    width: 100%;
+    margin-top: 3.5em;
+    text-align: center;
+}
+
+.compte{
+    font-size: 2.5em;
+    margin-top: 0.3em;
+    margin-left: 0.3em;
+}
+
+.barre{
+    width: 100%;
+}
+
+.search{
+    background-color: transparent !important;
+    font-size: 1.5em;
+    position: relative;
+    margin-top: -0.3em;
+    color: #ffffff;
+}
+
 .margin{
-    padding-bottom: 4em;
-    padding-top: 5em;
+    padding-bottom: 8em;
+    padding-top: 10em;
 }
 
 .titre-appli{
@@ -66,6 +100,7 @@
 
 .img_recette{
     width: 100%;
+    margin-top: 1.5em;
 }
 
 .img-home{
@@ -73,5 +108,5 @@
     padding-right: 0;
 }
 .container-home{
-    margin-top: 70px;
+
 }

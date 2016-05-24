@@ -28,7 +28,7 @@
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-static-top partie-top">
-        <div class="container">
+        <div class="container col-md-12 col-sm_12 col_xs-12">
             <div class="navbar-header titre-appli">
 
                 <!-- Branding Image -->
@@ -36,8 +36,26 @@
                     La Gourmandise
                 </a>
             </div>
+            <div class="clearfix"></div>
         </div>
     </nav>
+    <nav class="navbar navbar-static-top partie-top recherche">
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <a href="#"><i class="fa fa-user compte" aria-hidden="true"></i></a>
+        </div>
+        <div class="navbar-header">
+            <form class="navbar-form" role="search">
+                <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                    <input type="text" class="form-control barre" placeholder="Rechercher">
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button type="submit" class="btn search"><i class="fa fa-search " aria-hidden="true"></i></button>
+                </div>
+
+            </form>
+        </div>
+    </nav>
+
 
     <!-- Menu en bas -->
     <nav class="navbar navbar-static-top partie-bottom">

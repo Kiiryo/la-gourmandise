@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container margin">
         <div class="row">
             @include('errors.message')
             <h3 class="container-home">Nouvautés :</h3>
