@@ -36,6 +36,7 @@
                     La Gourmandise
                 </a>
             </div>
+        </div>
     </nav>
 
     <!-- Menu en bas -->

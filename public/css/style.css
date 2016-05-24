@@ -1,5 +1,6 @@
-.navbar-toggle{
+.navbar-toggle .icon-bar{
     color: white;
+    background-color: white;
 }
 
 .navbar{
