@@ -14,7 +14,7 @@
                         Le formulaire de soumission
                     </div>
                     <div class="panel-body">
-                        @if(Auth::check() && (Auth::user()->id == $recette->user_id || Auth::user()->isAdmin))
+                        @if(Auth::check() && (Auth::user()->id == $recette->user_id || Auth::user()->admin == 1))
                             {!! Form::model($recette, array(
                                     'route' => array('recette.update', $recette->id),
                                     'method' => 'PUT'
