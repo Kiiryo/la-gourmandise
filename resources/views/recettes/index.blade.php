@@ -19,6 +19,7 @@
                     </div>
                 </div>
             @endforeach
+            {!! $list->links() !!}
         </div>
     </div>
 @endsection
