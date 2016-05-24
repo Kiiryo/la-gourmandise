@@ -17,7 +17,6 @@
                         <h4>{{$recette->description}}</h4>
                         <p>Type de recette : {{$recette->category}}</p>
                     </div>
-
                 </div>
             @endforeach
         </div>

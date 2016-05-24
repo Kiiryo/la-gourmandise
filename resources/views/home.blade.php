@@ -4,7 +4,7 @@
     <div class="container margin">
         <div class="row">
             @include('errors.message')
-            <h3 class="container-home">Nouvautés :</h3>
+            <h3 class="container-home">Nouveautés :</h3>
             @foreach($list as $recette)
                 <div class=" col-md-6 col-xs-12">
                     <div class="col-md-4 col-xs-4 img-home">
@@ -18,7 +18,6 @@
                         <p>{{$recette->description}}</p>
                         <p>Type de recette : {{$recette->category}}</p>
                     </div>
-
                 </div>
             @endforeach
             <h3>Recette du jour :</h3>

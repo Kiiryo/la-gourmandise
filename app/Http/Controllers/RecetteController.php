@@ -77,7 +77,8 @@ class RecetteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $recette = Recette::findOrFail($id);
+        return view('recettes.edit', compact('recette'));
     }
 
     /**
@@ -89,7 +90,20 @@ class RecetteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, ['title' => 'required', 'description' => 'required', 'category' => 'required', 'recette' => 'required', 'difficulte' => 'required']);
+
+        $recet = Recette::find($id);
+        $recet->user_id       = Auth::user()->id;
+        $recet->username      = Auth::user()->name;
+        $recet->id            = $request->id;
+        $recet->title         = $request->title;
+        $recet->category      = $request->category;
+        $recet->difficulte    = $request->difficulte;
+        $recet->description   = $request->description;
+        $recet->recette      = $request->recette;
+        $recet->validate      = $request->validate;
+        $recet->save();
+        return redirect()->route('recette.show',$recet->id)->with('success', 'Votre recette a bien été modifié.');
     }
 
     /**
@@ -100,6 +114,8 @@ class RecetteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $recette = Recette::findOrFail($id);
+        $recette->delete();
+        return redirect()->route('recette.index', $id)->with('success', 'Votre recette a bien été supprimé.');
     }
 }
