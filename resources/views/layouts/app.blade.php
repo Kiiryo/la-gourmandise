@@ -41,7 +41,7 @@
     </nav>
     <nav class="navbar navbar-static-top partie-top recherche">
         <div class="col-md-3 col-sm-3 col-xs-3">
-            <a href="#"><i class="fa fa-user compte" aria-hidden="true"></i></a>
+            <a href="{{ route('compte.index') }}"><i class="fa fa-user compte" aria-hidden="true"></i></a>
         </div>
         <div class="navbar-header">
             <form class="navbar-form" role="search">
