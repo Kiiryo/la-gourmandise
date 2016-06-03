@@ -15,7 +15,7 @@
                         <h2>{{$recette->id}}. {{$recette->title}}</h2>
                     </a>
                     <p class="auteur">Par :{{$recette->username}}</p>
-                    <h4>{{$recette->description}}</h4>
+                    <h4>{{$recette->description, 200}}</h4>
                     <p>Type de recette : {{$recette->category}}</p>
                 </div>
 

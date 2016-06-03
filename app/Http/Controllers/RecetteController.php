@@ -40,7 +40,8 @@ class RecetteController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['title' => 'required', 'description' => 'required', 'category' => 'required', 'recette' => 'required', 'difficulte' => 'required']);
+        $this->validate($request, ['title' => 'required', 'description' => 'required',
+            'category' => 'required', 'recette' => 'required', 'image' => 'required', 'difficulte' => 'required']);
 
         $recet = new Recette;
         $recet->user_id       = Auth::user()->id;
@@ -49,10 +50,17 @@ class RecetteController extends Controller
         $recet->title         = $request->title;
         $recet->category      = $request->category;
         $recet->difficulte    = $request->difficulte;
+        $imageName            = $recet->id . 'img.' . $request->file('image')->getClientOriginalExtension();
         $recet->description   = $request->description;
-        $recet->recette      = $request->recette;
+        $recet->image        = $imageName;
+        $recet->recette       = $request->recette;
         $recet->save();
-        return redirect()->route('recette.index')->with('success', 'Votre Bap a bien été soumis.');
+
+        $imageName = $recet->id . 'img.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(
+            base_path() . '/public/img/recet_img', $imageName
+        );
+        return redirect()->route('recette.index')->with('success', 'Votre Recette a bien été soumis.');
 
     }
 
@@ -90,7 +98,8 @@ class RecetteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, ['title' => 'required', 'description' => 'required', 'category' => 'required', 'recette' => 'required', 'difficulte' => 'required']);
+        $this->validate($request, ['title' => 'required', 'description' => 'required',
+            'category' => 'required', 'recette' => 'required', 'difficulte' => 'required']);
 
         $recet = Recette::find($id);
         $recet->user_id       = Auth::user()->id;

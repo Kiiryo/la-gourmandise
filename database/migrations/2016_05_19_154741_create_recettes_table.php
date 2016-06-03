@@ -20,6 +20,7 @@ class CreateRecettesTable extends Migration
             $table->string('validate')->default(0);
             $table->string('category');
             $table->text('recette');
+            $table->string('image')->nullable();
             $table->string('difficulte');
             $table->integer('user_id')->unsigned();
             $table->timestamps();

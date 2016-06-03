@@ -14,7 +14,7 @@
                         Le formulaire de soumission
                     </div>
                     <div class="panel-body">
-                        {!! Form::open(['route' => 'recette.store', 'method' => 'POST']) !!}
+                        {!! Form::open(['route' => 'recette.store', 'method' => 'POST', 'files' => 'true']) !!}
 
                         <div class="form-group">
                             {!! Form::text('title', null, [
@@ -50,6 +50,10 @@
                                   'class' => 'form-control',
                                   'placeholder' => 'Etapes de la recettes'
                               ]) !!}
+
+                        <label for="">Image de la recette </label>
+                        {!! Form::file('image', null) !!}
+                        <br>
 
                         <div class="form-group">
                             <label>Difficultés de la recette</label>
