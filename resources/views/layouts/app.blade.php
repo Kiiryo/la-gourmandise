@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <title>La Gourmandise</title>
 
     <!-- Fonts -->
@@ -28,9 +29,10 @@
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-static-top partie-top">
-        <div class="container col-md-12 col-sm_12 col_xs-12">
-            <div class="navbar-header titre-appli">
 
+        <div class="container col-md-10 col-sm-10 col-xs-12">
+            <div class="navbar-header titre-appli">
+                <a class="btn-back" href="{{ URL::previous() }}"><i class="fa fa-chevron-left back-icon" aria-hidden="true"></i></a>
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     La Gourmandise

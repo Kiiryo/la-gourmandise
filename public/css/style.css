@@ -40,7 +40,11 @@
     margin-top: 0.3em;
     margin-left: 0.3em;
 }
-
+.back-icon{
+    font-size: 1.5em;
+    margin-top: 0.1em;
+    margin-left: 1em;
+}
 .barre{
     width: 100%;
 }
@@ -97,6 +101,9 @@
     display: inline;
     float: left;
     width: 25%;
+}
+.btn-back{
+    float: left;
 }
 
 .auteur{
