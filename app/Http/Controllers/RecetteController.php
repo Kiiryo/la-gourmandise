@@ -44,22 +44,25 @@ class RecetteController extends Controller
             'category' => 'required', 'recette' => 'required', 'image' => 'required', 'difficulte' => 'required']);
 
         $recet = new Recette;
+        if($request->file('image') != null){
+            $imageName = $recet->id . 'img.' . $request->file('image')->getClientOriginalExtension();
+            $recet->image        = $imageName;
+            $imageName = $recet->id . 'img.' . $request->file('image')->getClientOriginalExtension();
+            $request->file('image1')->move(
+                base_path() . '/public/img/recet_img', $imageName
+            );
+
+        }
         $recet->user_id       = Auth::user()->id;
         $recet->username      = Auth::user()->name;
         $recet->id            = $request->id;
         $recet->title         = $request->title;
         $recet->category      = $request->category;
         $recet->difficulte    = $request->difficulte;
-        $imageName            = $recet->id . 'img.' . $request->file('image')->getClientOriginalExtension();
         $recet->description   = $request->description;
-        $recet->image        = $imageName;
         $recet->recette       = $request->recette;
         $recet->save();
 
-        $imageName = $recet->id . 'img.' . $request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(
-            base_path() . '/public/img/recet_img', $imageName
-        );
         return redirect()->route('recette.index')->with('success', 'Votre Recette a bien été soumis.');
 
     }
