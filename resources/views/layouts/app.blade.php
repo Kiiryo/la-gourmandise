@@ -60,18 +60,8 @@
     <!-- Menu en bas -->
     <nav class="navbar navbar-static-top partie-bottom">
         <div class="container">
-            <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <div class=" navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/') }}"><i class="fa fa-home fa-5" aria-hidden="true"></i><br> Accueil</a></li>
@@ -79,14 +69,9 @@
                     @if(Auth::check())
                         <li><a href="{{ route('recette.create') }}"><i class="fa fa-plus" aria-hidden="true"></i><br> Creer une recette</a></li>
                     @endif
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Connexion</a></li>
-                        <li><a href="{{ url('/register') }}">Inscription</a></li>
+                        <li><a href="{{ url('/login') }}"><i class="fa fa-sign-in fa-5" aria-hidden="true"></i><br> Connexion</a></li>
+                        <li><a href="{{ url('/register') }}"><i class="fa fa-pencil-square-o fa-5" aria-hidden="true"></i><br> Inscription</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -99,6 +84,7 @@
                         </li>
                     @endif
                 </ul>
+
             </div>
         </div>
     </nav>

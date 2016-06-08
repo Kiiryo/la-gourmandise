@@ -8,7 +8,7 @@
             @foreach($list as $recette)
                 <div class=" col-md-6 col-xs-12">
                     <div class="col-md-4 col-xs-4 img-home">
-                        <img src="{{asset('img/crepe.JPG')}}" alt="" class="img_recette">
+                        <img src="{{asset('img/recet_img/'.$recette->id.$recette->image)}}" alt="" class="img_recette">
                     </div>
                     <div class="col-md-8 col-xs-8">
                         <a href="{{route('recette.show', $recette->id)}}">

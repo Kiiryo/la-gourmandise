@@ -93,6 +93,11 @@
 .dropdown-menu > li > a{
     color: #333333;
 }
+.nav >li {
+    display: inline;
+    float: left;
+    width: 25%;
+}
 
 .auteur{
     font-style: italic;
