@@ -26,7 +26,7 @@
                     <img src="{{asset('img/crepe.JPG')}}" alt="" class="img_recette">
                 </div>
                 <div class="col-md-8 col-xs-8">
-                    <a href="{{route('recette.show', $recette->id)}}">
+                    <a href="">
                         <h4>Gateaux asiatique</h4>
                     </a>
                     <p class="auteur">Par Julien Xu</p>
