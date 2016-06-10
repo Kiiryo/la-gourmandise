@@ -32,7 +32,7 @@
 
         <div class="container col-md-10 col-sm-10 col-xs-12">
             <div class="navbar-header titre-appli">
-                <a class="btn-back" href="{{ URL::previous() }}"><i class="fa fa-chevron-left back-icon" aria-hidden="true"></i></a>
+
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     La Gourmandise
@@ -43,7 +43,7 @@
     </nav>
     <nav class="navbar navbar-static-top partie-top recherche">
         <div class="col-md-3 col-sm-3 col-xs-3">
-            <a href="{{ route('compte.index') }}"><i class="fa fa-user compte" aria-hidden="true"></i></a>
+            <a class="btn-back compte" href="{{ URL::previous() }}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
         </div>
         <div class="navbar-header">
             <form class="navbar-form" role="search">
@@ -70,6 +70,7 @@
                     <li><a href="{{ route('recette.index') }}"><i class="fa fa-list" aria-hidden="true"></i><br> Liste des recettes</a></li>
                     @if(Auth::check())
                         <li><a href="{{ route('recette.create') }}"><i class="fa fa-plus" aria-hidden="true"></i><br> Creer une recette</a></li>
+                        <li><a href="{{ route('compte.index') }}"><i class="fa fa-user " aria-hidden="true"></i><br> Mon compte</a></li>
                     @endif
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}"><i class="fa fa-sign-in fa-5" aria-hidden="true"></i><br> Connexion</a></li>

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
+
 
 class CompteController extends Controller
 {
@@ -13,9 +16,18 @@ class CompteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        return view('compte.index');
+        $user = Auth::user();
+        if(Auth::check()) {
+            return view('compte.index')->with(compact('user'));
+        }
     }
 
     /**
@@ -47,7 +59,7 @@ class CompteController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -58,8 +70,13 @@ class CompteController extends Controller
      */
     public function edit($id)
     {
-
-
+        $user = User::find($id);
+        if(Auth::check() && $id==Auth::user()->id) {
+            return view('compte.edit')->with(compact('user'));
+        }
+        else {
+            return redirect()->route('compte.edit', Auth::user()->id);
+        }
     }
 
     /**
@@ -71,7 +88,14 @@ class CompteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = Auth::user();
+        if ($request->user()) {
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = bcrypt($request->password);
+            $user->save();
+            return redirect()->route('compte.index', $user->id)->with('success', 'Votre message a bien été modifié.');
+        }
     }
 
     /**
