@@ -2,24 +2,23 @@
 
 @section('content')
     <div class="container margin">
-        <div class="row">
             @include('errors.message')
             <h3 class="container-home">Nouveautés :</h3>
+        <div class="row">
             @foreach($list as $recette)
-                <div class=" col-md-6 col-xs-12">
-                    <div class="col-md-4 col-xs-4 img-home">
+                <div class=" col-md-6 col-xs-6">
+                    <div class="col-md-4 col-xs-12 img-home">
                         <img src="{{asset('img/recet_img/'.$recette->id.$recette->image)}}" alt="" class="img_recette">
                     </div>
-                    <div class="col-md-8 col-xs-8">
+                    <div class="col-md-8 col-xs-12">
                         <a href="{{route('recette.show', $recette->id)}}">
                             <h4>{{$recette->id}}. {{$recette->title}}</h4>
                         </a>
                         <p class="auteur">Par :{{$recette->username}}</p>
-                        <p>{{str_limit($recette->description, 100)}}</p>
-                        <p>Type de recette : {{$recette->category}}</p>
                     </div>
                 </div>
             @endforeach
+        </div>
             <h3>Recette du jour :</h3>
             <div class=" col-md-6 col-xs-12">
                 <div class="col-md-4 col-xs-4 img-home">
@@ -35,7 +34,6 @@
                 </div>
 
             </div>
-        </div>
 
     </div>
 @endsection
