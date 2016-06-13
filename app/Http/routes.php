@@ -19,6 +19,8 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::auth();
 
+    Route::resource('/queries/search', 'QueryController@search');
+
     Route::get('/', 'HomeController@index');
 
     Route::resource('/recette', 'RecetteController');
