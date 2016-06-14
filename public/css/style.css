@@ -1,3 +1,7 @@
+@font-face{
+    font-family: 'btb';
+    src: url('../font/Back to Black Demo.ttf');
+}
 
 .navbar-toggle .icon-bar{
     color: white;
