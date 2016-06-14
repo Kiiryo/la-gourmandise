@@ -43,17 +43,18 @@
     </nav>
     <nav class="navbar navbar-static-top partie-top recherche">
         <div class="col-md-2 col-sm-2 col-xs-2">
+
             <a class="btn-back compte" href="{{ URL::previous() }}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
         </div>
 
         <div class="navbar-header">
             {!! Form::open(array('route' => 'queries.search.index', 'class'=>'form navbar-form searchform')) !!}
-            <div class="form-group col-md-8 col-sm-8 col-xs-8">
+            <div class="form-group col-md-9 col-sm-9 col-xs-9">
                 {!! Form::text('search', null, array('required',
                                                 'class'=>'form-control form-recherche',
                                                 'placeholder'=>'Rechercher une recette...')) !!}
             </div>
-            <div class="form-group col-md-2 col-sm-2 col-xs-2">
+            <div class="form-group col-md-1 col-sm-1 col-xs-1">
                 <button type="submit" class="btn search"><i class="fa fa-search " aria-hidden="true"></i></button>
             </div>
             {!! Form::close() !!}
@@ -69,7 +70,7 @@
             <div class=" navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}"><i class="fa fa-home fa-5" aria-hidden="true"></i><br> Accueil</a></li>
+                    <li><a href="{{ url('/') }}"><i class="fa fa-home fa-5" aria-hidden="true"></i><br> <p>Accueil</p></a></li>
                     <li><a href="{{ route('recette.index') }}"><i class="fa fa-list" aria-hidden="true"></i><br> Liste des recettes</a></li>
                     @if(Auth::check())
                         <li><a href="{{ route('recette.create') }}"><i class="fa fa-plus" aria-hidden="true"></i><br> Creer une recette</a></li>

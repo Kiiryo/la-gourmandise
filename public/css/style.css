@@ -54,7 +54,8 @@
     background-color: transparent !important;
     font-size: 1.5em;
     position: relative;
-    margin-top: -0.3em;
+    padding: 0;
+    border: none;
     color: #ffffff;
 }
 
@@ -81,10 +82,13 @@
 .navbar-collapse ul a{
     color: #ffffff;
     text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
 }
 
 .navbar-collapse ul a .fa{
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .navbar-collapse ul a:hover{
