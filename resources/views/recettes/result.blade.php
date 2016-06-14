@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container margin">
-        <div class="row">
             @include('errors.message')
             <h3>Résultat de la recherche <b>"{{$query}}"</b></h3>
             @if (count($recettesfound) === 0)
@@ -10,17 +9,16 @@
                 <a href="{{route('recette.index')}}" class="btn btn-warning">Retour a la liste des recettes</a>
             @elseif (count($recettesfound) >= 1)
             @foreach($recettesfound as $recettesfound)
-                <div class=" col-md-6 col-sm-12 col-xs-12">
-                    <div class="col-md-5 col-xs-5">
-                        <img src="{{asset('img/recet_img/'.$recettesfound->id.$recettesfound->image)}}" alt="" class="img_recette">
+                <div class=" col-md-6 col-sm-12 col-xs-12 list-recette">
+                    <div class="img-recettes col-md-4 col-xs-4">
+                        <img src="{{asset('img/recet_img/'.$recettesfound->id.$recettesfound->image)}}" alt="" class="img-list">
                     </div>
-                    <div class="col-md-7 col-xs-7">
+                    <div class="col-md-8 col-xs-8 p-recettes">
                         <a href="{{route('recette.show', $recettesfound->id)}}">
-                            <h3>{{$recettesfound->title}}</h3>
+                            <h4 class="titre-recette">{{$recettesfound->title}}</h4>
                         </a>
-                        <p class="auteur">Par :{{$recettesfound->username}}</p>
-                        <h4>{{str_limit($recettesfound->description, 100)}}</h4>
-                        <p>Type de recette : {{$recettesfound->category}}</p>
+                        <p>{{$recettesfound->category}}</p>
+                        <p>{{$recettesfound->difficulte}}</p>
                     </div>
                     <hr/>
                 </div>
@@ -28,5 +26,4 @@
             @endif
     {{--{!! $list->links() !!}--}}
         </div>
-    </div>
 @endsection

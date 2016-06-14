@@ -108,7 +108,6 @@ class RecetteController extends Controller
         $recet = Recette::find($id);
         $recet->user_id       = Auth::user()->id;
         $recet->username      = Auth::user()->name;
-        $recet->id            = $request->id;
         $recet->title         = $request->title;
         $recet->category      = $request->category;
         $recet->difficulte    = $request->difficulte;

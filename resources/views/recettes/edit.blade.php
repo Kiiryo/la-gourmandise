@@ -5,14 +5,7 @@
         <div class="row">
             @include('errors.message')
             <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Votre recette !</div>
-                </div>
-                <h1>Postez votre recette sur La Gourmandise</h1>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Le formulaire de soumission
-                    </div>
+                <h2 class="recette-titre">Modifiez votre recette !</h2>
                     <div class="panel-body">
                         @if(Auth::check() && (Auth::user()->id == $recette->user_id || Auth::user()->admin == 1))
                             {!! Form::model($recette, array(
@@ -46,8 +39,6 @@
                             ),[
                             'class' => 'form-control', 'style'=>'display:inline;'])
                             !!}
-
-                            <br/>
                         </div>
 
                         <label for="">La recette par étapes </label>
@@ -67,7 +58,7 @@
                             'class' => 'form-control', 'style'=>'display:inline;'])
                             !!}
 
-                            @if(Auth::check() && Auth::user()->admin ==1))
+                            @if(Auth::check() && Auth::user()->admin ==1)
                             <div class="form-group">
                                 <label>Projet validé</label>
                                 @if($recette->validate == 0)
@@ -91,7 +82,6 @@
 
                         @endif
                     </div>
-                </div>
             </div>
         </div>
     </div>

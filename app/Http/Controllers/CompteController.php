@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Recette;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -108,5 +109,13 @@ class CompteController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function mesrecettes()
+    {
+        $user = Auth::user();
+        $list = Recette::all();
+
+        return view('compte.mesrecettes')->with(compact('list', 'user'));
     }
 }

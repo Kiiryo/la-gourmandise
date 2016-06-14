@@ -25,5 +25,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::resource('/recette', 'RecetteController');
 
+    Route::get('/compte/mesrecettes', 'CompteController@mesrecettes');
+
     Route::resource('/compte', 'CompteController');
 });

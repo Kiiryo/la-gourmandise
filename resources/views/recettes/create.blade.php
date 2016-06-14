@@ -5,7 +5,7 @@
         <div class="row">
             @include('errors.message')
             <div class="col-md-10 col-md-offset-1">
-                <h2 class="text-center"><strong>Ajouter une recette</strong></h2>
+                <h2 class="recette-titre"><strong>Ajouter une recette</strong></h2>
 
                     <div class="panel-body">
                         {!! Form::open(['route' => 'recette.store', 'method' => 'POST', 'files' => 'true']) !!}
@@ -24,7 +24,7 @@
 
 
                         <div class="form-group">
-
+                            <label>Types de recette</label>
                             {!! Form::select('category', array(
                             'Gateau' => 'Gateaux',
                             'Patisserie' =>'Patisserie',
@@ -34,7 +34,6 @@
                             'class' => 'form-control', 'style'=>'display:inline;'])
                             !!}
 
-                            <br/>
                         </div>
 
                         {!! Form::textarea('recette', null, [
@@ -44,7 +43,6 @@
 
                         <label for="">Image de la recette </label>
                         {!! Form::file('image', null) !!}
-                        <br>
 
                         <div class="form-group">
                             <label>Difficultés de la recette</label>
@@ -54,10 +52,9 @@
                             'moyen' =>'Moyen',
                             'difficile' =>'Difficile',
                             ),[
-                            'class' => 'form-control', 'style'=>'display:inline;'])
+                            'class' => 'form-control','placeholder' => 'test', 'style'=>'display:inline;'])
                             !!}
-
-                            <br/>
+                            <br>
                         </div>
 
                         {!! Form::submit('Envoyer', ['class' => ' form-control']) !!}

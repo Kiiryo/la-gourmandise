@@ -67,7 +67,9 @@
 
 .margin{
     padding-bottom: 8em;
-    padding-top: 7em;
+    padding-top: 8em;
+    background-color: #F8F8F8;
+    min-height: 600px;
 }
 
 .titre-appli{
@@ -184,6 +186,7 @@
 
 .modif-compte{
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .modif-compte button{
@@ -231,6 +234,7 @@
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    background-color: #FFFFFF;
     margin-bottom: 10px;
     height: 100px;
 }
@@ -300,4 +304,37 @@
 }
 .last-part{
     margin-bottom: 5px;
+}
+
+/* PAGE CREATE RECETTE JULIEN */
+
+.form-control{
+    border: 2px solid #eb6b56;
+    border-radius: 2px;
+}
+.form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #eb6b56;
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #eb6b56;
+    opacity:  1;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:   #eb6b56;
+    opacity:  1;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #eb6b56;
+}
+.form-group{
+    margin-top: 10px;
+}
+.form-group > select{
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    border: 2px solid #eb6b56;
+}
+h2{
+    font-family: 'btb';
 }

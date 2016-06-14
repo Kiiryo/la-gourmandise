@@ -14,7 +14,13 @@
                             <i class="fa fa-pencil fa-5" aria-hidden="true"></i><br> Modifier mon profil</button>
                     </a>
                 </div>
-                <div class="deco col-md-6 col-sm-6 col-xs-6">
+                <div class="modif-compte col-md-6 col-sm-6 col-xs-6">
+                    <a href="{{ url('compte/mesrecettes') }}">
+                        <button class="connexion btn">
+                            <i class="fa fa-list fa-5" aria-hidden="true"></i><br>Voir mes recettes</button>
+                    </a>
+                </div>
+                <div class="deco col-md-12 col-sm-12 col-xs-12">
                     <a href="{{ url('/logout') }}">
                         <button class="connexion btn ">
                             <i class="fa fa-sign-out fa-5" aria-hidden="true"></i><br> Déconnexion</button>
