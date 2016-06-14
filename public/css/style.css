@@ -57,6 +57,8 @@
     padding: 0;
     border: none;
     color: #ffffff;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
 }
 
 .margin{
@@ -98,7 +100,6 @@
 .nav .open > a {
     background-color: transparent !important;
 }
-
 .dropdown-menu > li > a{
     color: #333333;
 }
@@ -139,6 +140,10 @@
 .modif-compte{
     text-align: center;
 }
+.nav-haut{
+    display: table;
+    width: 100%;
+}
 
 /* PAGE LISTE RECETTE JULIEN */
 .recette-titre{
@@ -174,7 +179,10 @@
     width: auto;
     margin-top: 10px;
 }
-
+.bar-nav{
+    padding: 0;
+    margin-bottom: 0;
+}
 .titre-recette{
     color: #cc4732;
 }
