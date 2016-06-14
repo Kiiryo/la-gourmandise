@@ -6,19 +6,18 @@
         @if(Auth::check())
             @include('errors.message')
             <div class="container">
-                <h2 class="titre-compte">Vous êtes connecté en temps que {{ Auth::user()->name }} !</h2>
-                <div class="modif-compte">
+                <h2 class="titre-compte">Vous êtes connecté en temps que <font color="#eb6b56">{{ Auth::user()->name }}</font> !</h2>
+                <br>
+                <div class="modif-compte col-md-6 col-sm-6 col-xs-6">
                     <a href="{{route('compte.edit', $user->id)}}">
-                        <button class="connexion btn btn-warning">
-                            <i class="fa fa-pencil fa-5" aria-hidden="true"></i> Modifier mon profil</button>
+                        <button class="connexion btn ">
+                            <i class="fa fa-pencil fa-5" aria-hidden="true"></i><br> Modifier mon profil</button>
                     </a>
                 </div>
-                <br>
-                <div class="deco">
-
+                <div class="deco col-md-6 col-sm-6 col-xs-6">
                     <a href="{{ url('/logout') }}">
-                        <button class="connexion btn btn-danger">
-                            <i class="fa fa-sign-out fa-5" aria-hidden="true"></i> Déconnexion</button>
+                        <button class="connexion btn ">
+                            <i class="fa fa-sign-out fa-5" aria-hidden="true"></i><br> Déconnexion</button>
                     </a>
                 </div>
             </div>

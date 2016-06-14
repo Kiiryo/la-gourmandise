@@ -131,24 +131,85 @@
     padding-left: 0;
     padding-right: 0;
 }
-.container-home{
 
+.gros-titre-home{
+    font-family: 'btb';
+    text-align: center;
+    color: #cc4732;
+}
+
+.titre-home{
+    font-family: 'btb';
+    text-align: center;
+    color: #eb6b56;
+    font-size: 2.2em;
+}
+
+.description{
+
+}
+
+.recet-titre{
+    font-family: 'btb';
+    color: #cc4732;
 }
 
 .titre-compte{
     text-align: center;
+    font-family: 'btb';
 }
 
 .deco{
     text-align: center;
 }
 
+.deco .fa{
+    font-size: 1.5em;
+}
+
+.deco button{
+    width: 100%;
+}
+
+.connexion{
+    color: #eb6b56;
+    background-color: transparent;
+    border-color: #eb6b56;
+}
+
+.valid-modif{
+    width: 100%;
+    font-size: 1.2em;
+}
+
 .modif-compte{
     text-align: center;
 }
+
+.modif-compte button{
+    width: 100%;
+}
+
+.modif-compte .fa{
+    font-size: 1.5em;
+}
+
 .nav-haut{
     display: table;
     width: 100%;
+}
+
+.panel-heading{
+    font-family: 'btb';
+    color: #eb6b56;
+}
+
+.lien-co{
+    text-align: center;
+}
+
+.lien-connexion a{
+    color: #eb6b56;
 }
 
 /* PAGE LISTE RECETTE JULIEN */

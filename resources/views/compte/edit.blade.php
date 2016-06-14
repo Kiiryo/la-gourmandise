@@ -9,7 +9,7 @@
             </div>
 
             <div class="container">
-                <h3> Modifier le profil de : {{$user->name}} </h3>
+                <h3> Modifier le profil de : <font color="#eb6b56">{{$user->name}}</font>  </h3>
 
                 {!! Form::open(['url' => route('compte.update', $user->id), 'method' => 'PUT']) !!}
                 {{ csrf_field() }}
@@ -26,9 +26,9 @@
 
                 <!-- <label for="password_confirmation"> Confirmez votre mot de passe </label><br>
         {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
-                        <br>--><br>
+                        <br>-->
 
-                {!! Form::submit('Envoyer', ['class' => 'btn btn-success']) !!}
+                {!! Form::submit('Envoyer', ['class' => 'btn connexion valid-modif']) !!}
                 {!! Form::close() !!}
 
 

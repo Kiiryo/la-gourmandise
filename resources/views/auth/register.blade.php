@@ -3,9 +3,10 @@
 @section('content')
 <div class="container margin">
     <div class="row">
+        <br>
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+            <div class="">
+                <h2 class="panel-heading">Inscription</h2>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
@@ -68,7 +69,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn connexion">
                                     <i class="fa fa-btn fa-user"></i>Inscription
                                 </button>
                             </div>
