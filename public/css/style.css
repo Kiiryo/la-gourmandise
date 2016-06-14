@@ -170,6 +170,52 @@
     width: auto;
     margin-top: 10px;
 }
+
 .titre-recette{
     color: #cc4732;
+}
+
+/* PAGE Detail RECETTE JULIEN */
+
+.img-detail{
+    height: auto;
+    width: 100%;
+}
+.img-slide{
+    height: 200px;
+    padding: 0;
+}
+.descrip-titre{
+    background-color: #FFFFFF;
+    padding: 0;
+}
+.descrip-all{
+    background-color: #FFFFFF;
+}
+.titre-detail{
+    margin-top: -35px;
+    margin-bottom: 10px;
+    background-color:#eb6b56;
+    color: white;
+    padding: 5px 0;
+    opacity: 0.8;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+.fa-detail{
+    font-size: 1.7em;
+    margin-bottom: 5px;
+}
+.border-right{
+    border-right: 1px solid #F0F0F0;
+    margin-bottom: 5px;
+}
+.icon{
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.last-part{
+    margin-bottom: 5px;
 }
