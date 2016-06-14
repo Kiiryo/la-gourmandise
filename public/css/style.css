@@ -78,6 +78,8 @@
 .titre-appli .navbar-brand{
     float: none !important;
     margin-top: 1em;
+    font-size: 25px;
+    font-family: 'btb';
 }
 
 .navbar-header a{
@@ -152,10 +154,11 @@
 /* PAGE LISTE RECETTE JULIEN */
 .recette-titre{
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
     margin-bottom: 10px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    font-family: "btb";
     border-bottom: 1px solid #999999;
 }
 .list-recette{
@@ -189,6 +192,7 @@
 }
 .titre-recette{
     color: #cc4732;
+    font-family: "btb";
 }
 
 /* PAGE Detail RECETTE JULIEN */
@@ -212,6 +216,7 @@
     margin-top: -35px;
     margin-bottom: 10px;
     background-color:#eb6b56;
+    font-family: "btb";
     color: white;
     padding: 5px 0;
     opacity: 0.8;
