@@ -34,10 +34,10 @@
                             <label>Type de recette</label>
 
                             {!! Form::select('category', array(
-                            'gateau' => 'Gateaux',
-                            'patisserie' =>'Patisserie',
-                            'viennoiserie' =>'Viennoiserie',
-                            'dessert' =>'Dessert',
+                            'Gateau' => 'Gateaux',
+                            'Patisserie' =>'Patisserie',
+                            'Viennoiserie' =>'Viennoiserie',
+                            'Dessert' =>'Dessert',
                             ),[
                             'class' => 'form-control', 'style'=>'display:inline;'])
                             !!}

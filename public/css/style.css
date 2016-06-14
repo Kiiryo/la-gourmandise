@@ -1,3 +1,4 @@
+
 .navbar-toggle .icon-bar{
     color: white;
     background-color: white;
@@ -59,7 +60,7 @@
 
 .margin{
     padding-bottom: 8em;
-    padding-top: 10em;
+    padding-top: 7em;
 }
 
 .titre-appli{
@@ -133,4 +134,42 @@
 
 .modif-compte{
     text-align: center;
+}
+
+/* PAGE LISTE RECETTE JULIEN */
+.recette-titre{
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #999999;
+}
+.list-recette{
+    -moz-box-shadow: 1px 1px 6px 0px #c0c0c0;
+    -webkit-box-shadow: 1px 1px 6px 0px #c0c0c0;
+    -o-box-shadow: 1px 1px 6px 0px #c0c0c0;
+    box-shadow: 1px 1px 6px 0px #c0c0c0;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#c0c0c0, Direction=134, Strength=6);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    height: 100px;
+}
+.img-recettes{
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+}
+.p-recettes{
+    padding-right: 0;
+}
+.img-list{
+    height: 80px;
+    width: auto;
+    margin-top: 10px;
+}
+.titre-recette{
+    color: #cc4732;
 }

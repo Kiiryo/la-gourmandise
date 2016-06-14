@@ -2,25 +2,24 @@
 
 @section('content')
     <div class="container margin">
-        <div class="row">
+        <h3 class="recette-titre">Toutes nos recettes</h3>
             @include('errors.message')
             @foreach($list as $recette)
-                <div class=" col-md-6 col-sm-12 col-xs-12">
-                    <div class="col-md-5 col-xs-5">
-                        <img src="{{asset('img/recet_img/'.$recette->id.$recette->image)}}" alt="" class="img_recette">
+                <div class=" col-md-6 col-sm-12 col-xs-12 list-recette">
+                    <div class="img-recettes col-md-4 col-xs-4">
+                        <img src="{{asset('img/recet_img/'.$recette->id.$recette->image)}}" alt="" class="img-list">
                     </div>
-                    <div class="col-md-7 col-xs-7">
+                    <div class="col-md-8 col-xs-8 p-recettes">
                         <a href="{{route('recette.show', $recette->id)}}">
-                            <h3>{{$recette->id}}. {{$recette->title}}</h3>
+                            <h4 class="titre-recette"> {{$recette->title}}</h4>
                         </a>
-                        <p class="auteur">Par :{{$recette->username}}</p>
-                        <h4>{{str_limit($recette->description, 100)}}</h4>
-                        <p>Type de recette : {{$recette->category}}</p>
+                        <!--<p class="auteur">{{$recette->username}}</p>-->
+                        <p>{{$recette->category}}</p>
+                        <p>{{$recette->difficulte}}</p>
                     </div>
                     <hr/>
                 </div>
             @endforeach
             {!! $list->links() !!}
-        </div>
     </div>
 @endsection

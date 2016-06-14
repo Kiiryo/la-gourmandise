@@ -12,7 +12,7 @@
                     </div>
                     <div class="col-md-8 col-xs-12">
                         <a href="{{route('recette.show', $recette->id)}}">
-                            <h4>{{$recette->id}}. {{$recette->title}}</h4>
+                            <h4>{{$recette->title}}</h4>
                         </a>
                         <p class="auteur">Par :{{$recette->username}}</p>
                     </div>
