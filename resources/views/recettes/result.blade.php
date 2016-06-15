@@ -9,7 +9,7 @@
                 <a href="{{route('recette.index')}}" class="btn btn-warning">Retour a la liste des recettes</a>
             @elseif (count($recettesfound) >= 1)
             @foreach($recettesfound as $recettesfound)
-                @if($projetsfound->valide == 1)
+                @if($recettesfound->validate == 1)
                 <div class=" col-md-6 col-sm-12 col-xs-12 list-recette">
                     <div class="img-recettes col-md-4 col-xs-4">
                         <img src="{{asset('img/recet_img/'.$recettesfound->id.$recettesfound->image)}}" alt="" class="img-list">
