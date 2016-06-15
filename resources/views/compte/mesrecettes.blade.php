@@ -9,7 +9,7 @@
                 <p>Projets non-validés</p>
             </div>
         @foreach($list as $recette)
-                @if(Auth::user()->id == $recette->user_id || Auth::user()->isAdmin))
+                @if(Auth::user()->id == $recette->user_id || Auth::user()->isAdmin)
                     @if($recette->validate == 0)
                     <div class=" col-md-6 col-sm-12 col-xs-12 list-recette">
                         <div class="img-recettes col-md-4 col-xs-4">
