@@ -33,7 +33,7 @@
                    <p><b>Etapes de la recette: </b><br>{{$recette->recette}}</p>
 
 
-                   @if(Auth::check() && (Auth::user()->id == $recette->user_id || Auth::user()->isAdmin))
+                   @if(Auth::check() && (Auth::user()->id == $recette->user_id || Auth::user()->admin ==1))
                    <a href="{{ route('recette.edit', $recette->id)}}" class="btn btn-success btn-line btn-rect">
                        <i class="fa fa-pencil"></i> Editer
                    </a>
