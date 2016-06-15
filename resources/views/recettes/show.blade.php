@@ -38,7 +38,9 @@
                        <i class="fa fa-pencil"></i> Editer
                    </a>
                    {!! Form::model($recette, array('route' => array('recette.destroy', $recette->id), 'method' => 'DELETE')) !!}
-                   {!! Form::submit('Supprimer', ['class' => 'btn btn-danger']) !!}
+                    <button class="btn btn-danger">
+                        <i class="fa fa-pencil"></i> supprimer
+                    </button>
                    {!! Form::close() !!}
 
                    @endif
