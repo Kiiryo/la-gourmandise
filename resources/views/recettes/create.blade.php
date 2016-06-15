@@ -13,13 +13,13 @@
                         <div class="form-group">
                             {!! Form::text('title', null, [
                             'class' => 'form-control',
-                            'placeholder' => 'Name de la Recette'
+                            'placeholder' => 'Nom de la Recette'
                             ]) !!}
                         </div>
 
                         {!! Form::textarea('description', null, [
                                   'class' => 'form-control',
-                                  'placeholder' => 'Description recettes'
+                                  'placeholder' => 'Description'
                               ]) !!}
 
 
