@@ -34,14 +34,22 @@
 
 
                    @if(Auth::check() && (Auth::user()->id == $recette->user_id || Auth::user()->admin ==1))
-                   <a href="{{ route('recette.edit', $recette->id)}}" class="btn btn-success btn-line btn-rect">
-                       <i class="fa fa-pencil"></i> Editer
-                   </a>
-                   {!! Form::model($recette, array('route' => array('recette.destroy', $recette->id), 'method' => 'DELETE')) !!}
-                    <button class="btn btn-danger">
-                        <i class="fa fa-pencil"></i> supprimer
-                    </button>
-                   {!! Form::close() !!}
+
+                   <div class="modif col-md-6 col-sm-6 col-xs-6">
+                       <a href="{{ route('recette.edit', $recette->id)}}" class="btn connexion">
+                           <i class="fa fa-pencil"></i> Editer
+                       </a>
+                   </div>
+
+
+                    <div class="supp col-md-6 col-sm-6 col-xs-6">
+                        {!! Form::model($recette, array('route' => array('recette.destroy', $recette->id), 'method' => 'DELETE')) !!}
+                        <button class="btn connexion">
+                            <i class="fa fa-trash"></i> Supprimer
+                        </button>
+                        {!! Form::close() !!}
+                    </div><br><br>
+
 
                    @endif
             </div>

@@ -179,6 +179,18 @@
     border-color: #eb6b56;
 }
 
+.modif .btn{
+   width: 100%;
+}
+
+.supp .btn{
+    width: 100%;
+}
+
+.bouton{
+    margin-bottom: 1em;
+}
+
 .valid-modif{
     width: 100%;
     font-size: 1.2em;
