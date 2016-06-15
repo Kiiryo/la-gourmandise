@@ -27,7 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $list = Recette::take(2)->orderBy('created_at', 'DESC')->get();
+        $list = Recette::take(3)->orderBy('created_at', 'DESC')->get();
         return view('/home', compact('list'));
     }
+
 }

@@ -60,13 +60,21 @@
 
                             @if(Auth::check() && Auth::user()->admin ==1)
                             <div class="form-group">
-                                <label>Projet validé</label>
+                                <label>Recette validé</label>
                                 @if($recette->validate == 0)
                                     {!! Form::checkbox('validate', '1') !!}
                                 @else($recette->validate == 1)
                                     {!! Form::checkbox('validate', '0') !!}
                                 @endif
                             </div>
+                                <div class="form-group">
+                                    <label>Recette du jour</label>
+                                    @if($recette->jour == 0)
+                                        {!! Form::checkbox('jour', '1') !!}
+                                    @else($recette->jour == 1)
+                                        {!! Form::checkbox('jour', '0') !!}
+                                    @endif
+                                </div>
                             @endif
                             <br/>
                         </div>

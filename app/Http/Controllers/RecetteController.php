@@ -114,6 +114,7 @@ class RecetteController extends Controller
         $recet->description   = $request->description;
         $recet->recette      = $request->recette;
         $recet->validate      = $request->validate;
+        $recet->jour        = $request->jour;
         $recet->save();
         return redirect()->route('recette.show',$recet->id)->with('success', 'Votre recette a bien été modifié.');
     }

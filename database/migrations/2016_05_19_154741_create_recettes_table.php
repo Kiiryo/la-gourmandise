@@ -18,6 +18,7 @@ class CreateRecettesTable extends Migration
             $table->string('username');
             $table->text('description');
             $table->string('validate')->default(0);
+            $table->string('jour')->default(0);
             $table->string('category');
             $table->text('recette');
             $table->string('image')->nullable();
