@@ -64,7 +64,7 @@
                                 @if($recette->validate == 0)
                                     {!! Form::checkbox('validate', '1') !!}
                                 @else($recette->validate == 1)
-                                    {!! Form::checkbox('validate', 'smallInteger', true) !!}
+                                    {!! Form::checkbox('validate', '0') !!}
                                 @endif
                             </div>
                             @endif
